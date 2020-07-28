@@ -14,8 +14,7 @@
   <body>
     <h1><center>Coronavirus Purity Test</center></h1>
     <h2><center>How good have you been??</center></h2>
-    <div>
-    <form>
+    <div id="questions">
       <ol>
         <li>
           <input type="checkbox" class="question" id="1">&nbsp; Forgot to wash your hands
@@ -170,15 +169,41 @@
       </ol>
       <span>
           <center>
-            <button type="submit">Calculate my score!</button>
-            <button>Clear my checkboxes</button>
+            <input class="button" type="submit" id="submit" value="Calculate my score!">
+            <input class="button" type="submit" id="clear" value="Clear checkboxes">
           </center>
       </span>
-    </form>
-
     </div>
 
+    <div id="showScore">
+        <h2><center>Your score:</center></h2>
+        <h1 id="score"></h1>
+    </div>
     <br>
+
+    
+    <script>
+        $("#showScore").hide();
+
+        //CALCULATES SCORE
+        $('#submit').click(function() {
+            var sinList = document.querySelectorAll('input[type="checkbox"]:checked');
+            var sins = sinList.length;
+            var purity = 50-sins;
+
+            // Shows the score in the h1
+            $('#score').html(purity);
+            
+            // Shows the score and hides the checks
+            $("#showScore").show();
+            $("#questions").hide();
+        });
+
+        //CLEAR CHECKBOXES
+        $('#clear').click(function() {
+            $('input:checkbox').removeAttr('checked');
+        });
+    </script>
 
     <!--bootstrap js-->
     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" 
