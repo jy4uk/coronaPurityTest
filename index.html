@@ -181,6 +181,7 @@
     <div id="showScore">
         <h2><center>Your score:</center></h2>
         <center><h1 id="score"></h1></center>
+        <center><input class="button" type="submit" id="back" value="Take the test again!"></center>
     </div>
     <br>
 
@@ -194,7 +195,7 @@
             var sins = sinList.length;
             var purity = 50-sins;
 
-            // Shows the score in the h1
+            //Shows the score
             $('#score').html(purity);
             
             // Shows the score and hides the checks
@@ -207,6 +208,13 @@
             // $('input:checkbox').removeAttr('checked');
             $('input:checkbox').prop('checked', false);
         });
+
+        //GO BACK TO TAKE THE TEST AGAIN
+        $('#back').click(function() {
+            $('input:checkbox').prop('checked', false);
+            $("#showScore").hide();
+            $("#toHide").show();
+        })
     </script>
 
     <!--bootstrap js-->
