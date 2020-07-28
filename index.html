@@ -7,6 +7,9 @@
     integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <link rel="stylesheet" href="./resources/css/styles.css" type="text/css">
 
+    <!-- JQuery -->
+    <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+
     <title>Corona Purity Test</title>
   </head>
 
@@ -14,7 +17,7 @@
   <body>
     <h1><center>Coronavirus Purity Test</center></h1>
     <h2><center>How good have you been??</center></h2>
-    <div id="questions">
+    <div id="toHide">
       <ol>
         <li>
           <input type="checkbox" class="question" id="1">&nbsp; Forgot to wash your hands
@@ -177,7 +180,7 @@
 
     <div id="showScore">
         <h2><center>Your score:</center></h2>
-        <h1 id="score"></h1>
+        <center><h1 id="score"></h1></center>
     </div>
     <br>
 
@@ -196,12 +199,13 @@
             
             // Shows the score and hides the checks
             $("#showScore").show();
-            $("#questions").hide();
+            $("#toHide").hide();
         });
 
         //CLEAR CHECKBOXES
         $('#clear').click(function() {
-            $('input:checkbox').removeAttr('checked');
+            // $('input:checkbox').removeAttr('checked');
+            $('input:checkbox').prop('checked', false);
         });
     </script>
 
