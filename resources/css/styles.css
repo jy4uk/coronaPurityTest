@@ -13,3 +13,7 @@ li {
     padding-bottom: 5px;
     font-size: large;
 }
+
+#tweet {
+    align-items: center !important;
+}
