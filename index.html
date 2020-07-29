@@ -9,6 +9,8 @@
     <link href="https://fonts.googleapis.com/css2?family=Karla&display=swap" rel="stylesheet">
     <!-- JQuery -->
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+    <!-- HTML2CANVAS -->
+    <script src= "https://files.codepedia.info/files/uploads/iScripts/html2canvas.js"></script> 
     <title>Take the Coronavirus Purity Test :)</title>
     <script data-ad-client="ca-pub-5248519944831087" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
   </head>
@@ -18,8 +20,23 @@
     <div id="fb-root"></div>
     <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v7.0" nonce="kbuHcyKo"></script>
     
-    <h1><center>Coronavirus Purity Test</center></h1>
-    <h4><center>How good have you been during quarantine??</center></h4>
+    <div id="save-image">
+        <h1><center>Coronavirus Purity Test</center></h1>
+        <h4><center>How good have you been during quarantine??</center></h4>
+        <div id="showScore">
+                <h2><center>Your score:</center></h2>
+                <center><h1 id="score"></h1></center>
+                <center><h1 id="tier"></h1></center>
+            <center><input class="button" type="submit" id="back" value="Take the test again!"></center>
+            <br>
+            <center>
+                <a id="save-image-button" href="#">Save your results!</a>
+                <div id="tweet"><a href="https://twitter.com/share?ref_src=hello" class="twitter-share-button" data-show-count="false">Tweet</a><script target="_blank" async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></div>
+                <div class="fb-share-button" data-href="https://www.coronapuritytest.com" data-layout="button" data-size="small"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.coronapuritytest.com%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Share</a></div>
+            </center>
+        </div>
+    </div>
+    
     <br>
     <br>
     <div id="toHide">
@@ -182,20 +199,7 @@
           </center>
       </span>
     </div>
-
-    <div id="showScore">
-        <h2><center>Your score:</center></h2>
-        <center><h1 id="score"></h1></center>
-        <center><h1 id="tier"></h1></center>
-        <center><input class="button" type="submit" id="back" value="Take the test again!"></center>
-        <br>
-        <center>
-            <div id="tweet"><a href="https://twitter.com/share?ref_src=hello" class="twitter-share-button" data-show-count="false">Tweet</a><script target="_blank" async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></div>
-            <div class="fb-share-button" data-href="https://www.coronapuritytest.com" data-layout="button" data-size="small"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.coronapuritytest.com%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Share</a></div>
-        </center>
-    </div>
     <br>
-
     
     <script>
         $("#showScore").hide();
@@ -256,7 +260,37 @@
             $('input:checkbox').prop('checked', false);
             $("#showScore").hide();
             $("#toHide").show();
-        })
+        });
+
+        //SAVE SCREENSHOT OF SCORE
+        $(document).ready(function() { 
+          
+          //global variables
+          var element = $("#save-image");  
+          var getCanvas;  
+
+          $("#save-image-button").click(function() { 
+            //generates preview
+            html2canvas(element, { 
+                  onrendered: function(canvas) { 
+                      $("#save-image").append(canvas); 
+                      getCanvas = canvas; 
+                  } 
+              }); 
+            //THIS SHOULD BE THE PART TO DOWNLOAD IMAGE
+              var imgageData =  
+                  getCanvas.toDataURL("image/png"); 
+            
+              // Now browser starts downloading  
+              // it instead of just showing it 
+              var newData = imgageData.replace( 
+              /^data:image\/png/, "data:application/octet-stream"); 
+            
+              $("#btn-Convert-Html2Image").attr( 
+              "download", "CoronaPurityTestScore.png").attr( 
+              "href", newData); 
+          }); 
+        }); 
     </script>
 
     <!--bootstrap js-->
