@@ -17,3 +17,7 @@ li {
 #tweet {
     align-items: center !important;
 }
+
+#score {
+    font-size: 5rem;
+}
