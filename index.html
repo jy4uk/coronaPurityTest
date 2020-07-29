@@ -19,7 +19,41 @@
   <body>
     <div id="fb-root"></div>
     <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v7.0" nonce="kbuHcyKo"></script>
-    
+    <div id="headers2">
+      <h1><center>Coronavirus Purity Test</center></h1>
+      <h4><center>How good have you been during quarantine??</center></h4>
+    </div>
+
+    <div id="save-image">
+      <div id="headers">
+        <h1><center>Coronavirus Purity Test</center></h1>
+        <h4><center>How good have you been during quarantine??</center></h4>
+      </div>
+      <div id="showScore">
+        <h2><center>Your score:</center></h2>
+        <center><h1 id="score"></h1></center>
+        <center><h1 id="tier"></h1></center>       
+        <br>
+      </div>
+      
+      
+    </div>
+    <div id="save-button">
+      <center><input class="button" type="submit" id="back" value="Take the test again!"></center>
+      <center><a id="save-image-button" href="#">Save your results!</a></center>
+      <br>
+    </div>
+    <div id="social-media">
+      <center><div id="tweet"><a href="https://twitter.com/share?ref_src=hello" class="twitter-share-button" data-show-count="false">Tweet</a><script target="_blank" async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></div>
+        <div class="fb-share-button" data-href="https://www.coronapuritytest.com" data-layout="button" data-size="small">
+          <a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.coronapuritytest.com%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Share</a></div></center>
+          <br>
+          <br>
+    </div>
+
+
+
+    <!--
     <div id="save-image">
         <h1><center>Coronavirus Purity Test</center></h1>
         <h4><center>How good have you been during quarantine??</center></h4>
@@ -36,7 +70,7 @@
             </center>
         </div>
     </div>
-    
+    --->
     <br>
     <br>
     <div id="toHide">
@@ -199,10 +233,27 @@
           </center>
       </span>
     </div>
+    <div class="ad">
+      <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+      <!-- bottom page ad -->
+      <ins class="adsbygoogle"
+          style="display:block"
+          data-ad-client="ca-pub-6249871194969876"
+          data-ad-slot="9224290384"
+          data-ad-format="auto"
+          data-full-width-responsive="true"></ins>
+      <script>
+        (adsbygoogle = window.adsbygoogle || []).push({});
+      </script>
+    </div>
     <br>
     
     <script>
+      //CALCULATE SCORE CODE
         $("#showScore").hide();
+        $("#save-button").hide();
+        $("#social-media").hide();
+        $("#headers2").hide();
 
         //CALCULATES SCORE
         $('#submit').click(function() {
@@ -246,20 +297,29 @@
             
             // Shows the score and hides the checks
             $("#showScore").show();
+            $("#save-button").show();
+            $("#social-media").show();
             $("#toHide").hide();
         });
 
-        //CLEAR CHECKBOXES
+        //CLEAR CHECKBOXES CODE
         $('#clear').click(function() {
             // $('input:checkbox').removeAttr('checked');
             $('input:checkbox').prop('checked', false);
         });
 
-        //GO BACK TO TAKE THE TEST AGAIN
+        //TAKE THE TEST AGAIN CODE
         $('#back').click(function() {
+            //SET ALL CHECKS TO UNCHECKED
             $('input:checkbox').prop('checked', false);
-            $("#showScore").hide();
             $("#toHide").show();
+            $("#headers2").show();
+            //HIDE ALL THINGS THAT SHOULD BE ORIGINALLY HIDDEN
+            $("#showScore").hide();
+            $("#save-button").hide();
+            $("#social-media").hide();
+            //EXTRA THINGS THAT MAY NEED TO BE HIDDEN
+            $("#save-image").hide();
         });
 
         //SAVE SCREENSHOT OF SCORE
@@ -271,6 +331,7 @@
 
           $("#save-image-button").click(function() { 
             //generates preview
+            $("#save-image-button").hide();
             html2canvas(element, { 
                   onrendered: function(canvas) { 
                       $("#save-image").append(canvas); 
