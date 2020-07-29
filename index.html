@@ -15,6 +15,9 @@
 
 
   <body>
+    <div id="fb-root"></div>
+    <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v7.0" nonce="kbuHcyKo"></script>
+    
     <h1><center>Coronavirus Purity Test</center></h1>
     <h4><center>How good have you been??</center></h4>
     <div id="toHide">
@@ -183,8 +186,10 @@
         <center><h1 id="score"></h1></center>
         <center><input class="button" type="submit" id="back" value="Take the test again!"></center>
         <br>
-        <div id="tweet"><center><a href="https://twitter.com/share?ref_src=hello" class="twitter-share-button" data-show-count="false">Tweet</a><script target="_blank" async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></center></div>
-        
+        <center>
+            <div id="tweet"><a href="https://twitter.com/share?ref_src=hello" class="twitter-share-button" data-show-count="false">Tweet</a><script target="_blank" async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></div>
+            <div class="fb-share-button" data-href="https://www.coronapuritytest.com" data-layout="button" data-size="small"><a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.coronapuritytest.com%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Share</a></div>
+        </center>
     </div>
     <br>
 
