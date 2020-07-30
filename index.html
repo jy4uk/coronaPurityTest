@@ -41,7 +41,7 @@
     </div>
     <div id="save-button">
         <center><input class="button" type="submit" id="back" value="Take the test again!"></center>
-        <center><a id="save-image-button" href="#">Save your results!</a></center>
+        <!-- <center><a id="save-image-button" href="#">Save your results!</a></center> -->
         <br>
     </div>
 
@@ -254,7 +254,7 @@
         //HIDE SCORE PAGE FEATURES (upon loading page)
         $("#save-image").hide();
         $("#save-button").hide();
-        $("#save-image-button").hide();
+        // $("#save-image-button").hide();
         $("#social-media").hide();
 
         //CALCULATES SCORE AND SHOWS SCORE PAGE FEATURES
@@ -302,7 +302,7 @@
             $("#save-image").show();
             $("#showScore").show();
             $("#save-button").show();
-            $("#save-image-button").show();
+            // $("#save-image-button").show();
             $("#social-media").show();
             $("#toHide").hide();
         });
@@ -321,9 +321,10 @@
             $("#showScore").hide();
             $("#save-button").hide();
             $("#social-media").hide();
+
             //EXTRA THINGS THAT MAY NEED TO BE HIDDEN
             $("#save-image").hide();
-            $("#save-image-button").hide();
+            // $("#save-image-button").hide();
 
 
             $("#toHide").show();
@@ -331,33 +332,33 @@
         });
 
         //SAVE SCREENSHOT OF SCORE
-        $(document).ready(function() {
-            //global variables
-            var element = $("#save-image");
-            var getCanvas;
-            $("#save-image-button").click(function() {
-                //generates preview
-                $("#save-image-button").hide();
-                html2canvas(element, {
-                    onrendered: function(canvas) {
-                        $("#save-image").append(canvas);
-                        getCanvas = canvas;
-                    }
-                });
-                //THIS SHOULD BE THE PART TO DOWNLOAD IMAGE
-                var imgageData =
-                    getCanvas.toDataURL("image/png");
+        // $(document).ready(function() {
+        //     //global variables
+        //     var element = $("#save-image");
+        //     var getCanvas;
+        //     $("#save-image-button").click(function() {
+        //         //generates preview
+        //         $("#save-image-button").hide();
+        //         html2canvas(element, {
+        //             onrendered: function(canvas) {
+        //                 $("#save-image").append(canvas);
+        //                 getCanvas = canvas;
+        //             }
+        //         });
+        //         //THIS SHOULD BE THE PART TO DOWNLOAD IMAGE
+        //         var imgageData =
+        //             getCanvas.toDataURL("image/png");
 
-                // Now browser starts downloading  
-                // it instead of just showing it 
-                var newData = imgageData.replace(
-                    /^data:image\/png/, "data:application/octet-stream");
+        //         // Now browser starts downloading  
+        //         // it instead of just showing it 
+        //         var newData = imgageData.replace(
+        //             /^data:image\/png/, "data:application/octet-stream");
 
-                $("#btn-Convert-Html2Image").attr(
-                    "download", "CoronaPurityTestScore.png").attr(
-                        "href", newData);
-            });
-        }); 
+        //         $("#btn-Convert-Html2Image").attr(
+        //             "download", "CoronaPurityTestScore.png").attr(
+        //                 "href", newData);
+        //     });
+        // }); 
     </script>
 
     <!--bootstrap js-->
