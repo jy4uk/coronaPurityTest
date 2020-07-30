@@ -1,57 +1,58 @@
 <!doctype html>
 <html lang="en">
-  <head>
+
+<head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" 
-    integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+        integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
     <link rel="stylesheet" href="./resources/css/styles.css" type="text/css">
     <link href="https://fonts.googleapis.com/css2?family=Karla&display=swap" rel="stylesheet">
     <!-- JQuery -->
     <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
     <!-- HTML2CANVAS -->
-    <script src= "https://files.codepedia.info/files/uploads/iScripts/html2canvas.js"></script> 
+    <script src="https://files.codepedia.info/files/uploads/iScripts/html2canvas.js"></script>
     <title>Take the Coronavirus Purity Test :)</title>
-    <script data-ad-client="ca-pub-5248519944831087" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-  </head>
+    <script data-ad-client="ca-pub-5248519944831087" async
+        src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+</head>
 
 
-  <body>
+<body>
     <div id="fb-root"></div>
     <script async defer crossorigin="anonymous" src="https://connect.facebook.net/en_US/sdk.js#xfbml=1&version=v7.0" nonce="kbuHcyKo"></script>
     <div id="headers2">
-      <h1><center>Coronavirus Purity Test</center></h1>
-      <h4><center>How good have you been during quarantine??</center></h4>
+        <h1><center>Coronavirus Purity Test</center></h1>
+        <h4><center>How good have you been during quarantine??</center></h4>
     </div>
 
     <div id="save-image">
-      <div id="headers">
-        <h1><center>Coronavirus Purity Test</center></h1>
-        <h4><center>How good have you been during quarantine??</center></h4>
-      </div>
-      <div id="showScore">
-        <h2><center>Your score:</center></h2>
-        <center><h1 id="score"></h1></center>
-        <center><h1 id="tier"></h1></center>       
-        <br>
-      </div>
-      
-      
+        <div id="headers">
+            <h1><center>Coronavirus Purity Test</center></h1>
+            <h4><center>How good have you been during quarantine??</center></h4>
+        </div>
+
+        <div id="showScore">
+            <h2><center>Your score:</center></h2>
+            <center><h1 id="score"></h1></center>
+            <center><h1 id="tier"></h1></center>
+            <br>
+        </div>
     </div>
     <div id="save-button">
-      <center><input class="button" type="submit" id="back" value="Take the test again!"></center>
-      <center><a id="save-image-button" href="#">Save your results!</a></center>
-      <br>
+        <center><input class="button" type="submit" id="back" value="Take the test again!"></center>
+        <center><a id="save-image-button" href="#">Save your results!</a></center>
+        <br>
     </div>
+
     <div id="social-media">
-      <center><div id="tweet"><a href="https://twitter.com/share?ref_src=hello" class="twitter-share-button" data-show-count="false">Tweet</a><script target="_blank" async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></div>
-        <div class="fb-share-button" data-href="https://www.coronapuritytest.com" data-layout="button" data-size="small">
-          <a target="_blank" href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.coronapuritytest.com%2F&amp;src=sdkpreparse" class="fb-xfbml-parse-ignore">Share</a></div></center>
-          <br>
-          <br>
+        <center>
+            <div id="tweet"><a href="https://twitter.com/share?ref_src=hello" class="twitter-share-button" data-show-count="false">Tweet</a><script target="_blank" async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script></div>
+            <div class="fb-share-button" data-href="https://www.coronapuritytest.com" data-layout="button" data-size="small"><a target="_blank"href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fwww.coronapuritytest.com%2F&amp;src=sdkpreparse"class="fb-xfbml-parse-ignore">Share</a></div>
+        </center>
+        <br>
+        <br>
     </div>
-
-
 
     <!--
     <div id="save-image">
@@ -74,239 +75,240 @@
     <br>
     <br>
     <div id="toHide">
-      <ol>
-        <li>
-          <input type="checkbox" class="question" id="1">&nbsp; Forgot to wash your hands
-        </li>
-        <li>
-          <input type="checkbox" class="question" id="2">&nbsp; Touched your face in public
-        </li>
-        <li>
-          <input type="checkbox" class="question" id="3">&nbsp; Went on a date
-        </li>
-        <li>
-          <input type="checkbox" class="question" id="4">&nbsp; Ate in at a restaurant
-        </li>
-        <li>
-          <input type="checkbox" class="question" id="5">&nbsp; Didn’t wear your mask in public
-        </li>
-        <li>
-          <input type="checkbox" class="question" id="6">&nbsp; Met in a group of more than 10 people
-        </li>
-        <li>
-          <input type="checkbox" class="question" id="7">&nbsp; Went to the beach
-        </li>
-        <li>
-          <input type="checkbox" class="question" id="8">&nbsp; Went into someone else’s house
-        </li>
-        <li>
-          <input type="checkbox" class="question" id="9">&nbsp; Met an elderly individual in their home
-        </li>
-        <li>
-          <input type="checkbox" class="question" id="10">&nbsp; Pulled your mask to your neck (instead of taking it off)
-        </li>
-        <li>
-          <input type="checkbox" class="question" id="11">&nbsp; Went to a mall
-        </li>
-        <li>
-          <input type="checkbox" class="question" id="12">&nbsp; Didn't get a test when you felt sick
-        </li>
-        <li>
-          <input type="checkbox" class="question" id="13">&nbsp; Hanging out with people who you know have been unsafe
-        </li>
-        <li>
-          <input type="checkbox" class="question" id="14">&nbsp; Going to the gym
-        </li>
-        <li>
-          <input type="checkbox" class="question" id="15">&nbsp; Bought too much toilet paper
-        </li>
-        <li>
-          <input type="checkbox" class="question" id="16">&nbsp; Bought too much soap
-        </li>
-        <li>
-          <input type="checkbox" class="question" id="17">&nbsp; Used your phone and didn’t wash it
-        </li>
-        <li>
-          <input type="checkbox" class="question" id="18">&nbsp; Used public transportation
-        </li>
-        <li>
-          <input type="checkbox" class="question" id="19">&nbsp; Left home when you didn’t need to
-        </li>
-        <li>
-          <input type="checkbox" class="question" id="20">&nbsp; Went to a bar
-        </li>
-        <li>
-          <input type="checkbox" class="question" id="21">&nbsp; Went to a party
-        </li>
-        <li>
-          <input type="checkbox" class="question" id="22">&nbsp; Bought an N-95 mask
-        </li>
-        <li>
-          <input type="checkbox" class="question" id="23">&nbsp; Traveled to another state
-        </li>
-        <li>
-          <input type="checkbox" class="question" id="24">&nbsp; Traveled to another country
-        </li>
-        <li>
-          <input type="checkbox" class="question" id="25">&nbsp; Met friends without masks
-        </li>
-        <li>
-          <input type="checkbox" class="question" id="25">&nbsp; Visited people who tested positive
-        </li>
-        <li>
-          <input type="checkbox" class="question" id="26">&nbsp; Put your mask on but not correctly
-        </li>
-        <li>
-          <input type="checkbox" class="question" id="27">&nbsp; Didn’t cover your mouth while you sneeze
-        </li>
-        <li>
-          <input type="checkbox" class="question" id="28">&nbsp; Taken an Uber/Lyft
-        </li>
-        <li>
-          <input type="checkbox" class="question" id="29">&nbsp; Went to a protest where people didn't wear masks
-        </li>
-        <li>
-          <input type="checkbox" class="question" id="30">&nbsp; Hopped fences to go to fields/tracks and workout
-        </li>
-        <li>
-          <input type="checkbox" class="question" id="31">&nbsp; Used cash to pay
-        </li>
-        <li>
-          <input type="checkbox" class="question" id="32">&nbsp; Touched elevator buttons
-        </li>
-        <li>
-          <input type="checkbox" class="question" id="33">&nbsp; Touched doorknobs/handles
-        </li>
-        <li>
-          <input type="checkbox" class="question" id="34">&nbsp; Skipped hand sanitizer on the way in to places
-        </li>
-        <li>
-          <input type="checkbox" class="question" id="35">&nbsp; Skipped hand sanitizer on the way out of places
-        </li>
-        <li>
-          <input type="checkbox" class="question" id="36">&nbsp; Ignored the news
-        </li>
-        <li>
-          <input type="checkbox" class="question" id="37">&nbsp; Taken a flight
-        </li>
-        <li>
-          <input type="checkbox" class="question" id="38">&nbsp; Gave up on your quarantine workout routine
-        </li>
-        <li>
-          <input type="checkbox" class="question" id="39">&nbsp; Washed your hands improperly
-        </li>
-        <li>
-          <input type="checkbox" class="question" id="40">&nbsp; Went to a pool
-        </li>
-        <li>
-          <input type="checkbox" class="question" id="41">&nbsp; Used the same mask over again
-        </li>
-        <li> 
-          <input type="checkbox" class="question" id="43">&nbsp; Said “I wish this was all over”
-        </li>
-        <li>
-          <input type="checkbox" class="question" id="44">&nbsp; Attended church
-        </li>
-        <li>
-          <input type="checkbox" class="question" id="45">&nbsp; Shaking hands with someone
-        </li>
-        <li>
-          <input type="checkbox" class="question" id="46">&nbsp; Used your stimulus check on stuff you didn’t need
-        </li>
-        <li>
-          <input type="checkbox" class="question" id="47">&nbsp; Read fake news about coronavirus and believed it
-        </li>
-        <li>
-          <input type="checkbox" class="question" id="48">&nbsp; Hugging someone
-        </li>
-        <li>
-          <input type="checkbox" class="question" id="49">&nbsp; Playing group sports
-        </li>
-        <li>
-          <input type="checkbox" class="question" id="50">&nbsp; Forgot that this will come to an end :)
-        </li>
-      </ol>
-      <span>
-          <center>
-            <input class="button" type="submit" id="submit" value="Calculate my score!">
-            <input class="button" type="submit" id="clear" value="Clear checkboxes">
-          </center>
-      </span>
+        <ol>
+            <li>
+                <input type="checkbox" class="question" id="1">&nbsp; Forgot to wash your hands
+            </li>
+            <li>
+                <input type="checkbox" class="question" id="2">&nbsp; Touched your face in public
+            </li>
+            <li>
+                <input type="checkbox" class="question" id="3">&nbsp; Went on a date
+            </li>
+            <li>
+                <input type="checkbox" class="question" id="4">&nbsp; Ate in at a restaurant
+            </li>
+            <li>
+                <input type="checkbox" class="question" id="5">&nbsp; Didn’t wear your mask in public
+            </li>
+            <li>
+                <input type="checkbox" class="question" id="6">&nbsp; Met in a group of more than 10 people
+            </li>
+            <li>
+                <input type="checkbox" class="question" id="7">&nbsp; Went to the beach
+            </li>
+            <li>
+                <input type="checkbox" class="question" id="8">&nbsp; Went into someone else’s house
+            </li>
+            <li>
+                <input type="checkbox" class="question" id="9">&nbsp; Met an elderly individual in their home
+            </li>
+            <li>
+                <input type="checkbox" class="question" id="10">&nbsp; Pulled your mask to your neck (instead of taking
+                it off)
+            </li>
+            <li>
+                <input type="checkbox" class="question" id="11">&nbsp; Went to a mall
+            </li>
+            <li>
+                <input type="checkbox" class="question" id="12">&nbsp; Didn't get a test when you felt sick
+            </li>
+            <li>
+                <input type="checkbox" class="question" id="13">&nbsp; Hanging out with people who you know have been
+                unsafe
+            </li>
+            <li>
+                <input type="checkbox" class="question" id="14">&nbsp; Going to the gym
+            </li>
+            <li>
+                <input type="checkbox" class="question" id="15">&nbsp; Bought too much toilet paper
+            </li>
+            <li>
+                <input type="checkbox" class="question" id="16">&nbsp; Bought too much soap
+            </li>
+            <li>
+                <input type="checkbox" class="question" id="17">&nbsp; Used your phone and didn’t wash it
+            </li>
+            <li>
+                <input type="checkbox" class="question" id="18">&nbsp; Used public transportation
+            </li>
+            <li>
+                <input type="checkbox" class="question" id="19">&nbsp; Left home when you didn’t need to
+            </li>
+            <li>
+                <input type="checkbox" class="question" id="20">&nbsp; Went to a bar
+            </li>
+            <li>
+                <input type="checkbox" class="question" id="21">&nbsp; Went to a party
+            </li>
+            <li>
+                <input type="checkbox" class="question" id="22">&nbsp; Bought an N-95 mask
+            </li>
+            <li>
+                <input type="checkbox" class="question" id="23">&nbsp; Traveled to another state
+            </li>
+            <li>
+                <input type="checkbox" class="question" id="24">&nbsp; Traveled to another country
+            </li>
+            <li>
+                <input type="checkbox" class="question" id="25">&nbsp; Met friends without masks
+            </li>
+            <li>
+                <input type="checkbox" class="question" id="25">&nbsp; Visited people who tested positive
+            </li>
+            <li>
+                <input type="checkbox" class="question" id="26">&nbsp; Put your mask on but not correctly
+            </li>
+            <li>
+                <input type="checkbox" class="question" id="27">&nbsp; Didn’t cover your mouth while you sneeze
+            </li>
+            <li>
+                <input type="checkbox" class="question" id="28">&nbsp; Taken an Uber/Lyft
+            </li>
+            <li>
+                <input type="checkbox" class="question" id="29">&nbsp; Went to a protest where people didn't wear masks
+            </li>
+            <li>
+                <input type="checkbox" class="question" id="30">&nbsp; Hopped fences to go to fields/tracks and workout
+            </li>
+            <li>
+                <input type="checkbox" class="question" id="31">&nbsp; Used cash to pay
+            </li>
+            <li>
+                <input type="checkbox" class="question" id="32">&nbsp; Touched elevator buttons
+            </li>
+            <li>
+                <input type="checkbox" class="question" id="33">&nbsp; Touched doorknobs/handles
+            </li>
+            <li>
+                <input type="checkbox" class="question" id="34">&nbsp; Skipped hand sanitizer on the way in to places
+            </li>
+            <li>
+                <input type="checkbox" class="question" id="35">&nbsp; Skipped hand sanitizer on the way out of places
+            </li>
+            <li>
+                <input type="checkbox" class="question" id="36">&nbsp; Ignored the news
+            </li>
+            <li>
+                <input type="checkbox" class="question" id="37">&nbsp; Taken a flight
+            </li>
+            <li>
+                <input type="checkbox" class="question" id="38">&nbsp; Gave up on your quarantine workout routine
+            </li>
+            <li>
+                <input type="checkbox" class="question" id="39">&nbsp; Washed your hands improperly
+            </li>
+            <li>
+                <input type="checkbox" class="question" id="40">&nbsp; Went to a pool
+            </li>
+            <li>
+                <input type="checkbox" class="question" id="41">&nbsp; Used the same mask over again
+            </li>
+            <li>
+                <input type="checkbox" class="question" id="43">&nbsp; Said “I wish this was all over”
+            </li>
+            <li>
+                <input type="checkbox" class="question" id="44">&nbsp; Attended church
+            </li>
+            <li>
+                <input type="checkbox" class="question" id="45">&nbsp; Shaking hands with someone
+            </li>
+            <li>
+                <input type="checkbox" class="question" id="46">&nbsp; Used your stimulus check on stuff you didn’t need
+            </li>
+            <li>
+                <input type="checkbox" class="question" id="47">&nbsp; Read fake news about coronavirus and believed it
+            </li>
+            <li>
+                <input type="checkbox" class="question" id="48">&nbsp; Hugging someone
+            </li>
+            <li>
+                <input type="checkbox" class="question" id="49">&nbsp; Playing group sports
+            </li>
+            <li>
+                <input type="checkbox" class="question" id="50">&nbsp; Forgot that this will come to an end :)
+            </li>
+        </ol>
+        <span>
+            <center>
+                <input class="button" type="submit" id="submit" value="Calculate my score!">
+                <input class="button" type="submit" id="clear" value="Clear checkboxes">
+            </center>
+        </span>
     </div>
+
     <div class="ad">
-      <br>
-      <br>
-      <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-      <!-- bottom page ad -->
-      <ins class="adsbygoogle"
-          style="display:block"
-          data-ad-client="ca-pub-6249871194969876"
-          data-ad-slot="9224290384"
-          data-ad-format="auto"
-          data-full-width-responsive="true"></ins>
-      <script>
-        (adsbygoogle = window.adsbygoogle || []).push({});
-      </script>
+        <br>
+        <br>
+        <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
+        <!-- bottom page ad -->
+        <ins class="adsbygoogle" style="display:block" data-ad-client="ca-pub-6249871194969876"
+            data-ad-slot="9224290384" data-ad-format="auto" data-full-width-responsive="true"></ins>
+        <script>
+            (adsbygoogle = window.adsbygoogle || []).push({});
+        </script>
     </div>
     <br>
-    
-    <script>
-      //CALCULATE SCORE CODE
-        $("#showScore").hide();
-        $("#save-button").hide();
-        $("#social-media").hide();
-        $("#headers2").hide();
 
-        //CALCULATES SCORE
+    <script>
+        //HIDE SCORE PAGE FEATURES (upon loading page)
+        $("#save-image").hide();
+        $("#save-button").hide();
+        $("#save-image-button").hide();
+        $("#social-media").hide();
+
+        //CALCULATES SCORE AND SHOWS SCORE PAGE FEATURES
         $('#submit').click(function() {
             var sinList = document.querySelectorAll('input[type="checkbox"]:checked');
             var sins = sinList.length;
-            var purity = 50-sins;
+            var purity = 50 - sins;
 
             //Shows the score
-            if(purity > 45){
-              $('#score').html(purity);
-              $('#tier').html("You're A DIAMOND TIER corona super soldier");
+            if (purity > 45) {
+                $('#score').html(purity);
+                $('#tier').html("You're A DIAMOND TIER corona super soldier");
             }
-            else if(purity > 40 && purity < 45){
-              $('#score').html(purity);
-              $('#tier').html("Amazing, you're a Platinum Tier virus warrior");
+            else if (purity > 40 && purity < 45) {
+                $('#score').html(purity);
+                $('#tier').html("Amazing, you're a Platinum Tier virus warrior");
             }
-            else if(purity > 35 && purity < 40){
-              $('#score').html(purity);
-              $('#tier').html("Congrats, you're a Gold Tier quarantine trooper");
+            else if (purity > 35 && purity < 40) {
+                $('#score').html(purity);
+                $('#tier').html("Congrats, you're a Gold Tier quarantine trooper");
             }
-            else if(purity > 30 && purity < 35){
-              $('#score').html(purity);
-              $('#tier').html("Whew, you're a Silver Tier cough battler");
+            else if (purity > 30 && purity < 35) {
+                $('#score').html(purity);
+                $('#tier').html("Whew, you're a Silver Tier cough battler");
             }
-            else if(purity > 25 && purity < 30){
-              $('#score').html(purity);
-              $('#tier').html("HEY... you're a Bronze Tier ~mild flu~ cutie poo :)");
+            else if (purity > 25 && purity < 30) {
+                $('#score').html(purity);
+                $('#tier').html("HEY... you're a Bronze Tier ~mild flu~ cutie poo :)");
             }
-            else if(purity > 20 && purity < 25){
-              $('#score').html(purity);
-              $('#tier').html("Honestly... you should step on a lego probably");
+            else if (purity > 20 && purity < 25) {
+                $('#score').html(purity);
+                $('#tier').html("Honestly... you should step on a lego probably");
             }
-            else if(purity > 15 && purity < 20){
-              $('#score').html(purity);
-              $('#tier').html("You're a DIAMOND TIER SCRUB");
+            else if (purity > 15 && purity < 20) {
+                $('#score').html(purity);
+                $('#tier').html("You're a DIAMOND TIER SCRUB");
             }
-            else if(purity < 10){
-              $('#score').html(purity);
-              $('#tier').html("I mean... come on. PEOPLE ARE DYIN");
+            else if (purity < 10) {
+                $('#score').html(purity);
+                $('#tier').html("I mean... come on. PEOPLE ARE DYIN");
             }
-            
-            // Shows the score and hides the checks
+
+            // Shows the score/score page features and hides the checks
+            $("#headers2").hide();
+            $("#save-image").show();
             $("#showScore").show();
             $("#save-button").show();
+            $("#save-image-button").show();
             $("#social-media").show();
             $("#toHide").hide();
         });
 
         //CLEAR CHECKBOXES CODE
         $('#clear').click(function() {
-            // $('input:checkbox').removeAttr('checked');
             $('input:checkbox').prop('checked', false);
         });
 
@@ -314,54 +316,53 @@
         $('#back').click(function() {
             //SET ALL CHECKS TO UNCHECKED
             $('input:checkbox').prop('checked', false);
-            $("#toHide").show();
-            $("#headers2").show();
-            //HIDE ALL THINGS THAT SHOULD BE ORIGINALLY HIDDEN
+            
+            //HIDE ALL THINGS THAT SHOULD BE ORIGINALLY HIDDEN (score page features)
             $("#showScore").hide();
             $("#save-button").hide();
             $("#social-media").hide();
             //EXTRA THINGS THAT MAY NEED TO BE HIDDEN
             $("#save-image").hide();
+            $("#save-image-button").hide();
+
+
+            $("#toHide").show();
+            $("#headers2").show();
         });
 
         //SAVE SCREENSHOT OF SCORE
-        $(document).ready(function() { 
-          
-          //global variables
-          var element = $("#save-image");  
-          var getCanvas;  
+        $(document).ready(function() {
+            //global variables
+            var element = $("#save-image");
+            var getCanvas;
+            $("#save-image-button").click(function() {
+                //generates preview
+                $("#save-image-button").hide();
+                html2canvas(element, {
+                    onrendered: function(canvas) {
+                        $("#save-image").append(canvas);
+                        getCanvas = canvas;
+                    }
+                });
+                //THIS SHOULD BE THE PART TO DOWNLOAD IMAGE
+                var imgageData =
+                    getCanvas.toDataURL("image/png");
 
-          $("#save-image-button").click(function() { 
-            //generates preview
-            $("#save-image-button").hide();
-            html2canvas(element, { 
-                  onrendered: function(canvas) { 
-                      $("#save-image").append(canvas); 
-                      getCanvas = canvas; 
-                  } 
-              }); 
-            //THIS SHOULD BE THE PART TO DOWNLOAD IMAGE
-              var imgageData =  
-                  getCanvas.toDataURL("image/png"); 
-            
-              // Now browser starts downloading  
-              // it instead of just showing it 
-              var newData = imgageData.replace( 
-              /^data:image\/png/, "data:application/octet-stream"); 
-            
-              $("#btn-Convert-Html2Image").attr( 
-              "download", "CoronaPurityTestScore.png").attr( 
-              "href", newData); 
-          }); 
+                // Now browser starts downloading  
+                // it instead of just showing it 
+                var newData = imgageData.replace(
+                    /^data:image\/png/, "data:application/octet-stream");
+
+                $("#btn-Convert-Html2Image").attr(
+                    "download", "CoronaPurityTestScore.png").attr(
+                        "href", newData);
+            });
         }); 
     </script>
 
     <!--bootstrap js-->
-    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" 
-    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" 
-    integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" 
-    integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
-  </body>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+</body>
 </html>
