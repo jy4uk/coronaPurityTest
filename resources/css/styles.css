@@ -21,3 +21,11 @@ li {
 #score {
     font-size: 5rem;
 }
+
+a {
+    color: #69b7c5
+}
+
+a:hover {
+    color: #9dc9d1
+}
